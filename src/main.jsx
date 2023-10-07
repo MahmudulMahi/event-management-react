@@ -12,6 +12,7 @@ import Login from './pages/login/Login.jsx';
 import Register from './pages/register/Register.jsx';
 import AuthProvider from './providers/AuthProvider';
 import Details from './pages/home/details/Details';
+import PrivateRoute from './providers/PrivateRoute/PrivateRoute';
 
 const router = createBrowserRouter([
   {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
       },
       {
         path:'/event/:id',
-        element:<Details></Details>
+        element:<PrivateRoute><Details></Details></PrivateRoute>
       },
       {
         path:'/login',
