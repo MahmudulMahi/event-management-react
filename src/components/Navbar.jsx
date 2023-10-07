@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import user from '../assets/user.png'
+
 import { AuthContext } from '../providers/AuthProvider';
 
 const Navbar = () => {
@@ -10,7 +10,7 @@ const Navbar = () => {
   const handleSignOut=()=>{
     logOut()
     .then()
-    
+
 
   }
   const nvLinks = <>

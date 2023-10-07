@@ -11,6 +11,7 @@ import Home from './pages/home/Home.jsx';
 import Login from './pages/login/Login.jsx';
 import Register from './pages/register/Register.jsx';
 import AuthProvider from './providers/AuthProvider';
+import Details from './pages/home/details/Details';
 
 const router = createBrowserRouter([
   {
@@ -19,7 +20,12 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/',
-        element:<Home></Home>
+        element:<Home></Home>,
+        loader:()=>fetch('/event.json')
+      },
+      {
+        path:'/event/:id',
+        element:<Details></Details>
       },
       {
         path:'/login',
