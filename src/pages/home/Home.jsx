@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Navbar from '../../components/Navbar';
 import Banner from '../../components/banner/Banner';
 import Eventcart from './Eventcart.jsx/Eventcart';
+import Footer from './footer/Footer';
 
 const Home = () => {
   const event=useLoaderData()
@@ -21,6 +22,8 @@ const Home = () => {
           event.map(aevent => <Eventcart key={aevent.id} event={aevent}></Eventcart>)
         }
       </div>
+
+      <Footer></Footer>
       
     </div>
   );
