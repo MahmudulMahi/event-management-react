@@ -13,6 +13,10 @@ import Register from './pages/register/Register.jsx';
 import AuthProvider from './providers/AuthProvider';
 import Details from './pages/home/details/Details';
 import PrivateRoute from './providers/PrivateRoute/PrivateRoute';
+import About from './pages/about/About';
+import Awards from './pages/awards/Awards';
+
+
 
 const router = createBrowserRouter([
   {
@@ -36,6 +40,14 @@ const router = createBrowserRouter([
       {
         path:'/register',
         element:<Register></Register>
+      },
+      {
+        path:'/about',
+        element:<PrivateRoute><About></About></PrivateRoute>
+      },
+      {
+        path:'/awards',
+        element:<PrivateRoute><Awards></Awards></PrivateRoute>
       },
     ]
   },
