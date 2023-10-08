@@ -4,6 +4,8 @@ import Navbar from '../../components/Navbar';
 import Banner from '../../components/banner/Banner';
 import Eventcart from './Eventcart.jsx/Eventcart';
 import Footer from './footer/Footer';
+import Feature from '../feature/Feature';
+import Contact from '../contact/Contact';
 
 const Home = () => {
   const event=useLoaderData()
@@ -22,6 +24,10 @@ const Home = () => {
           event.map(aevent => <Eventcart key={aevent.id} event={aevent}></Eventcart>)
         }
       </div>
+
+      <Feature></Feature>
+
+      <Contact></Contact>
 
       <Footer></Footer>
       
