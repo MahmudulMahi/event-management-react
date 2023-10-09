@@ -129,3 +129,16 @@ console.log(count);
 
 </p>
 </details>
+
+▶ Project Feature
+
+
+•This is event management website user can visite this site and show diffrent type of event and see details information.
+
+• user can registration and log in this site.
+
+•user show event details if user is login otherwise don't show details.
+
+•seamless career fair experiences! Our platform is meticulously crafted to streamline the entire process of organizing, promoting, and participating in career fairs.
+
+• user message and comment this site.
