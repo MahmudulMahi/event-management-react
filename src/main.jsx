@@ -15,6 +15,7 @@ import Details from './pages/home/details/Details';
 import PrivateRoute from './providers/PrivateRoute/PrivateRoute';
 import About from './pages/about/About';
 import Awards from './pages/awards/Awards';
+import Notfound from './pages/notfount/Notfound';
 
 
 
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<Notfound></Notfound>,
     children:[
       {
         path:'/',

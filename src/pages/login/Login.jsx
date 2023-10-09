@@ -3,10 +3,11 @@ import { useContext } from 'react';
 import Navbar from '../../components/Navbar';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
 
 const Login = () => {
 
-  const {signIn}=useContext(AuthContext)
+  const {signIn,googleLogin,createUser}=useContext(AuthContext)
   const location=useLocation();
   const navigate=useNavigate();
   console.log(location)
@@ -24,7 +25,14 @@ const Login = () => {
     })
     .catch(error=>{
       console.error(error)
+      toast("Email and Password does not match");
     })
+  }
+
+  const handelgooglelogin=(media)=>{
+    media()
+    .then(res=>console.log(res))
+    .catch(err=>console.log(err))
   }
   return (
     <div>
@@ -51,9 +59,13 @@ const Login = () => {
           <div className="form-control mt-6">
             <button className="btn btn-primary">Login</button>
           </div>
+          <div className="form-control mt-6">
+            <button onClick={()=>handelgooglelogin(googleLogin)} className="btn btn-primary">googleLogin</button>
+          </div>
         </form>
         <p className="text-center">Dont have an account <Link to='/register' className="text-blue-400">Register</Link></p>
       </div>
+      <ToastContainer />
     </div>
   );
 };

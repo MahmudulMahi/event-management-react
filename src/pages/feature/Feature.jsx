@@ -3,9 +3,9 @@ import { AiFillCalendar,AiOutlineAntDesign,AiTwotoneRocket,AiOutlineFieldTime,Ai
 const Feature = () => {
   return (
     <div>
-      <h2 className="text-center text-4xl">Features</h2>
+      <h2 className="text-center text-4xl mt-5 mb-5">Feat<span className="text-yellow-500">ures</span></h2>
 
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
       <div className="card bg-base-100 shadow-xl ">
         <div className="card-body ">
           <h2 className="card-title "><AiFillCalendar className="text-5xl"></AiFillCalendar></h2>

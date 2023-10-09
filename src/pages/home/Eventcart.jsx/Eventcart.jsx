@@ -12,7 +12,7 @@ const Eventcart = ({event}) => {
         {
           description.length >100 ? <p>{description.slice(0,100)} <Link
           to={`/event/${id}`}
-           className="text-yellow-300  btn">show details</Link></p>
+           className="text-yellow-500 bg-slate-500 btn">show details</Link></p>
           :<p>{description}</p>
         }
      
