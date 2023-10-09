@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import { AuthContext } from '../providers/AuthProvider';
+import userpic from '../assets/images (2).jpg'
 
 const Navbar = () => {
 
@@ -42,9 +43,9 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-          <div className="w-10 rounded-full">
-            <img src={user} />
-          </div>
+          {/* <div className="w-10 rounded-full">
+            <img src={userpic} />
+          </div> */}
         </label>
         {
           user ?

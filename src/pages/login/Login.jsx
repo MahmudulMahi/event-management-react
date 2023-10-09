@@ -5,12 +5,14 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 
+
 const Login = () => {
 
-  const {signIn,googleLogin,createUser}=useContext(AuthContext)
+  const {signIn,googleLogin}=useContext(AuthContext)
   const location=useLocation();
   const navigate=useNavigate();
   console.log(location)
+
   const handelLogin=e=>{
     e.preventDefault();
     const form=new FormData(e.currentTarget);
@@ -28,12 +30,16 @@ const Login = () => {
       toast("Email and Password does not match");
     })
   }
-
   const handelgooglelogin=(media)=>{
     media()
     .then(res=>console.log(res))
-    .catch(err=>console.log(err))
+    .catch(err=>{
+      console.log(err)
+      toast("wite few second")
+  })
+
   }
+
   return (
     <div>
       <Navbar></Navbar>

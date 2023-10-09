@@ -17,8 +17,8 @@ const Contact = () => {
   };
 
   return (
-    <section className="bg-gray-100 py-16">
-      <div className="container mx-auto flex">
+    <section className="bg-gray-100 py-16 ">
+      <div className="container mx-auto flex flex-col md:flex-col lg:flex-row ">
         <div className="w-1/2 pr-8 mx-auto ml-7">
           <h2 className="text-3xl font-semibold mb-4">Cont<span className='text-yellow-500'>act Us</span></h2>
           <p className="mb-4">
